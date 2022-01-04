@@ -4,9 +4,9 @@ const file = require('../config')
 
 router.get("/stream",(req,res)=>{
  //get the video id/name
-    
+   const {videoID} = req.body;
  //video info
- const path = file.path+"video1.mp4"
+ const path = file.path + videoID
  const fileStat = fs.statSync(path)
  const fileSize = fileStat.size
 //video info
